@@ -1,26 +1,127 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E183b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YBL-mu-bRM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Direction View Controller-->
+        <scene sceneID="3H3-dg-DhI">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YBL-mu-bRM" customClass="DirectionViewController" customModule="North_South_East_West" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="wGt-rs-PAo"/>
+                        <viewControllerLayoutGuide type="bottom" id="JH2-ak-5Iz"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="T7u-oz-9oR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaW-4i-uQ0">
+                                <rect key="frame" x="167" y="20" width="40" height="30"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="North"/>
+                                <connections>
+                                    <action selector="northButtonPressed:" destination="YBL-mu-bRM" eventType="touchUpInside" id="0fR-xH-32l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvj-JQ-dlK">
+                                <rect key="frame" x="167" y="617" width="41" height="30"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="South"/>
+                                <connections>
+                                    <action selector="southButtonPressed:" destination="YBL-mu-bRM" eventType="touchUpInside" id="PMm-xg-ob5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWo-Dc-iRc">
+                                <rect key="frame" x="16" y="318" width="35" height="30"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="West"/>
+                                <connections>
+                                    <action selector="westButtonPressed:" destination="YBL-mu-bRM" eventType="touchUpInside" id="5Me-UQ-mKe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZo-LY-Hhe">
+                                <rect key="frame" x="329" y="318" width="30" height="30"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="East"/>
+                                <connections>
+                                    <action selector="eastButtonPressed:" destination="YBL-mu-bRM" eventType="touchUpInside" id="X3X-dR-4Fh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JH2-ak-5Iz" firstAttribute="top" secondItem="Zvj-JQ-dlK" secondAttribute="bottom" constant="20" id="2Um-QD-MNy"/>
+                            <constraint firstItem="AZo-LY-Hhe" firstAttribute="centerY" secondItem="T7u-oz-9oR" secondAttribute="centerY" id="9YT-re-hA2"/>
+                            <constraint firstItem="AZo-LY-Hhe" firstAttribute="trailing" secondItem="T7u-oz-9oR" secondAttribute="trailingMargin" id="EU2-T0-2dD"/>
+                            <constraint firstItem="Zvj-JQ-dlK" firstAttribute="centerX" secondItem="T7u-oz-9oR" secondAttribute="centerX" id="ZiW-vZ-khI"/>
+                            <constraint firstItem="MWo-Dc-iRc" firstAttribute="leading" secondItem="T7u-oz-9oR" secondAttribute="leadingMargin" id="gKn-bK-7gp"/>
+                            <constraint firstItem="MWo-Dc-iRc" firstAttribute="centerY" secondItem="T7u-oz-9oR" secondAttribute="centerY" id="r38-6h-xVJ"/>
+                            <constraint firstItem="NaW-4i-uQ0" firstAttribute="top" secondItem="wGt-rs-PAo" secondAttribute="bottom" id="wEn-Zn-pLX"/>
+                            <constraint firstItem="NaW-4i-uQ0" firstAttribute="centerX" secondItem="T7u-oz-9oR" secondAttribute="centerX" id="xnG-MG-G2i"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="eastButton" destination="AZo-LY-Hhe" id="euB-3s-Oyi"/>
+                        <outlet property="northButton" destination="NaW-4i-uQ0" id="Vlf-ae-X8s"/>
+                        <outlet property="southButton" destination="Zvj-JQ-dlK" id="FvG-ZT-eFs"/>
+                        <outlet property="westButton" destination="MWo-Dc-iRc" id="q0d-G9-yot"/>
+                        <segue destination="ntC-nk-PR1" kind="presentation" identifier="directionSegue" id="yyr-8m-IKG"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RfZ-Vy-qJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="677.60000000000002" y="552.77361319340332"/>
+        </scene>
+        <!--Display Direction View Controller-->
+        <scene sceneID="F9J-d7-Vub">
+            <objects>
+                <viewController id="ntC-nk-PR1" customClass="DisplayDirectionViewController" customModule="North_South_East_West" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jrn-92-dsX"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uqu-Am-CUU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aWr-Ol-rdG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="my1-xs-Bvm">
+                                <rect key="frame" x="16" y="279.5" width="343" height="108"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="ntC-nk-PR1" eventType="touchUpInside" id="92E-rD-CqL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="my1-xs-Bvm" firstAttribute="centerX" secondItem="aWr-Ol-rdG" secondAttribute="centerX" id="3F1-bL-Jtm"/>
+                            <constraint firstItem="my1-xs-Bvm" firstAttribute="centerY" secondItem="aWr-Ol-rdG" secondAttribute="centerY" id="Dz9-sT-Qu3"/>
+                            <constraint firstItem="my1-xs-Bvm" firstAttribute="leading" secondItem="aWr-Ol-rdG" secondAttribute="leadingMargin" id="GTH-Yy-nb4"/>
+                            <constraint firstItem="my1-xs-Bvm" firstAttribute="trailing" secondItem="aWr-Ol-rdG" secondAttribute="trailingMargin" id="oPf-wC-ia8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lex-OP-ef3">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="7Sw-qU-Pne">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="ntC-nk-PR1" id="PJG-yt-0T9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="directionTravelledLabel" destination="my1-xs-Bvm" id="vX6-jL-KEk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RSE-Du-o3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="553"/>
         </scene>
     </scenes>
 </document>
